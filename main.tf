@@ -10,8 +10,8 @@ resource "aws_elasticache_subnet_group" "default" {
 
 
 resource "aws_security_group" "elasticache" {
-  name        = "${var.env}-elasticache-security_group"
-  description = "${var.env}-elasticache-security_group"
+  name        = "${var.env}-elasticache-security-group"
+  description = "${var.env}-elasticache-security-group"
   vpc_id      = var.vpc_id
 
   ingress {
