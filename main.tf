@@ -1,5 +1,5 @@
 resource "aws_elasticache_subnet_group" "default" {
-  name       = "${var.env}-elasticache-subnet_group"
+  name       = "${var.env}-elasticache_subnet_group"
   subnet_ids = var.subnet_ids
 
   tags = merge(
