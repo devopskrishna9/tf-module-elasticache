@@ -1,17 +1,17 @@
 resource "aws_elasticache_subnet_group" "default" {
-  name       = "${var.env}-elasticache-subnet-group"
+  name       = "${var.env}-elasticache-subnet_group"
   subnet_ids = var.subnet_ids
 
   tags = merge(
     local.common_tags,
-    { Name = "${var.env}-elasticache-subnet-group" }
+    { Name = "${var.env}-elasticache-subnet_group" }
   )
 }
 
 
 resource "aws_security_group" "elasticache" {
-  name        = "${var.env}-elasticache-security-group"
-  description = "${var.env}-elasticache-security-group"
+  name        = "${var.env}-elasticache-security_group"
+  description = "${var.env}-elasticache-security_group"
   vpc_id      = var.vpc_id
 
   ingress {
@@ -33,6 +33,7 @@ resource "aws_security_group" "elasticache" {
     local.common_tags,
     { Name = "${var.env}-elasticache-surity_group" }
   )
+
 }
 
 resource "aws_elasticache_replication_group" "elasticache" {
