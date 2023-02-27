@@ -1,10 +1,10 @@
 resource "aws_elasticache_subnet_group" "default" {
-  name       = "${var.env}-elasticache-subnet_group"
+  name       = "${var.env}-elasticache-subnet-group"
   subnet_ids = var.subnet_ids
 
   tags = merge(
     local.common_tags,
-    { Name = "${var.env}-elasticache-subnet_group" }
+    { Name = "${var.env}-elasticache-subnet-group" }
   )
 }
 
