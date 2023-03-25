@@ -50,3 +50,7 @@ resource "aws_elasticache_cluster" "elasticache" {
     { Name = "${var.env}-elasticache_replication_group" }
   )
 }
+
+output "redis" {
+  value = aws_elasticache_cluster.elasticache
+}
